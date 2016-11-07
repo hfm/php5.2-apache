@@ -23,6 +23,6 @@ RUN git clone --depth 1 git://github.com/php-build/php-build.git
 RUN sh /php-build/install.sh
 RUN echo '--with-apxs2=/usr/sbin/apxs' >> /usr/local/share/php-build/default_configure_options
 ENV PHP_VERSION 5.2.17
-RUN php-build $PHP_VERSION /usr/local
+RUN php-build $PHP_VERSION /usr
 
 CMD ["php", "-a"]
